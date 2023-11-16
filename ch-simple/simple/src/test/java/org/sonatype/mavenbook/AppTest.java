@@ -29,10 +29,12 @@ public class AppTest
     }
 
     /**
-     * Rigourous Test :-)
+     * Rigorous Test :-)
      */
     public void testApp()
     {
-        assertTrue( true );
+        String shouldFail = System.getenv("ISHOULDFAIL");
+        if (shouldFail==null) { shouldFail = "false"; }
+        assertFalse(shouldFail.equals("true"));
     }
 }
