@@ -33,7 +33,7 @@ public class AppTest
      */
     public void testApp()
     {
-        String shouldFail = System.getenv("BuildShouldFail");
+        String shouldFail = System.getenv("ShouldFail");
         if (shouldFail==null) { shouldFail = "false"; }
         assertFalse(shouldFail.equals("true"));
     }
